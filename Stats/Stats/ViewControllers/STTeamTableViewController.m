@@ -10,6 +10,7 @@
 #import "STTeamManager.h"
 #import "STTeamTableViewCell.h"
 #import "STTeam.h"
+#import "STCreateTeamViewController.h"
 
 @interface STTeamTableViewController  ()
 
@@ -69,6 +70,14 @@
         
     }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 1) {
+        STCreateTeamViewController *createTeamViewController = [[STCreateTeamViewController alloc] init];
+        [self pushViewController:createTeamViewController animated:YES];
+        
+    } 
 }
 
 @end

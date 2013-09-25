@@ -21,6 +21,7 @@
 		D30B30D217DCE33200F2F987 /* STCreateGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30B30D117DCE33200F2F987 /* STCreateGameViewController.m */; };
 		D30B30D517DCE40A00F2F987 /* STTeamTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30B30D417DCE40A00F2F987 /* STTeamTableViewController.m */; };
 		D30B30D817DCE57500F2F987 /* STStatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30B30D717DCE57500F2F987 /* STStatViewController.m */; };
+		D31F8CAD17F298DA007C5AE3 /* STCreateTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D31F8CAC17F298DA007C5AE3 /* STCreateTeamViewController.m */; };
 		D3CCA47C17DE309E004C5745 /* STTeamManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CCA47B17DE309E004C5745 /* STTeamManager.m */; };
 		D3CCA48017DE314C004C5745 /* STTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CCA47F17DE314C004C5745 /* STTableViewCell.m */; };
 		D3CCA48417DE3177004C5745 /* STTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CCA48317DE3177004C5745 /* STTeamTableViewCell.m */; };
@@ -59,6 +60,8 @@
 		D30B30D417DCE40A00F2F987 /* STTeamTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STTeamTableViewController.m; path = ViewControllers/STTeamTableViewController.m; sourceTree = "<group>"; };
 		D30B30D617DCE57500F2F987 /* STStatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STStatViewController.h; path = ViewControllers/STStatViewController.h; sourceTree = "<group>"; };
 		D30B30D717DCE57500F2F987 /* STStatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STStatViewController.m; path = ViewControllers/STStatViewController.m; sourceTree = "<group>"; };
+		D31F8CAB17F298DA007C5AE3 /* STCreateTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STCreateTeamViewController.h; path = ViewControllers/STCreateTeamViewController.h; sourceTree = "<group>"; };
+		D31F8CAC17F298DA007C5AE3 /* STCreateTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STCreateTeamViewController.m; path = ViewControllers/STCreateTeamViewController.m; sourceTree = "<group>"; };
 		D3CCA47A17DE309E004C5745 /* STTeamManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STTeamManager.h; path = DataSources/STTeamManager.h; sourceTree = "<group>"; };
 		D3CCA47B17DE309E004C5745 /* STTeamManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STTeamManager.m; path = DataSources/STTeamManager.m; sourceTree = "<group>"; };
 		D3CCA47E17DE314C004C5745 /* STTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STTableViewCell.h; path = TableViewCells/STTableViewCell.h; sourceTree = "<group>"; };
@@ -151,14 +154,16 @@
 		D30B30CF17DCE13E00F2F987 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D30B30CC17DCE13700F2F987 /* STGameTableViewController.h */,
-				D30B30CD17DCE13700F2F987 /* STGameTableViewController.m */,
-				D30B30D617DCE57500F2F987 /* STStatViewController.h */,
-				D30B30D717DCE57500F2F987 /* STStatViewController.m */,
 				D30B30D017DCE33200F2F987 /* STCreateGameViewController.h */,
 				D30B30D117DCE33200F2F987 /* STCreateGameViewController.m */,
+				D30B30CC17DCE13700F2F987 /* STGameTableViewController.h */,
+				D30B30CD17DCE13700F2F987 /* STGameTableViewController.m */,
 				D30B30D317DCE40A00F2F987 /* STTeamTableViewController.h */,
 				D30B30D417DCE40A00F2F987 /* STTeamTableViewController.m */,
+				D31F8CAB17F298DA007C5AE3 /* STCreateTeamViewController.h */,
+				D31F8CAC17F298DA007C5AE3 /* STCreateTeamViewController.m */,
+				D30B30D617DCE57500F2F987 /* STStatViewController.h */,
+				D30B30D717DCE57500F2F987 /* STStatViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -293,6 +298,7 @@
 				D30B30AA17DCE0F000F2F987 /* main.m in Sources */,
 				D30B30CE17DCE13700F2F987 /* STGameTableViewController.m in Sources */,
 				D3CCA48717DE31A2004C5745 /* STTeam.m in Sources */,
+				D31F8CAD17F298DA007C5AE3 /* STCreateTeamViewController.m in Sources */,
 				D30B30D817DCE57500F2F987 /* STStatViewController.m in Sources */,
 				D30B30AE17DCE0F000F2F987 /* STAppDelegate.m in Sources */,
 				D3CCA48017DE314C004C5745 /* STTableViewCell.m in Sources */,
