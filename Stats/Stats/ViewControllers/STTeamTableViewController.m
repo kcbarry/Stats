@@ -23,10 +23,13 @@
 - (void)loadView {
     [super loadView];
     [self.view setAutoresizingMask:(UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin)];
-    _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
-    [_tableView setDelegate:self];
-    [_tableView setDataSource:self];
-    [self.view addSubview:_tableView];
+    
+    UITableViewController *tableViewController = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+    [tableViewController.view setFrame:self.view.frame];
+    [tableViewController.tableView setDelegate:self];
+    [tableViewController.tableView setDataSource:self];
+    
+    [self pushViewController:tableViewController animated:NO];
 }
 
 #pragma mark - UITableViewDataSource

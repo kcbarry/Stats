@@ -30,8 +30,9 @@
 
 - (void)loadView {
     [super loadView];
-        [self.view setAutoresizingMask:(UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin)];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    [self.view setAutoresizingMask:(UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth |
+                                    UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin |
+                                    UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin)];
     self.extendedLayoutIncludesOpaqueBars = YES;
     
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
@@ -52,16 +53,19 @@
     [self.view addSubview:_homeTable.view];
     
     _awayTable = [[STTeamTableViewController alloc] init];
-    [_awayTable.view setFrame:CGRectMake(CGRectGetMaxX(self.view.frame)-(CGRectGetWidth(self.view.frame)/3.0), CGRectGetMinY(self.view.frame),
+    [_awayTable.view setFrame:CGRectMake(CGRectGetMaxX(self.view.frame)-(CGRectGetWidth(self.view.frame)/3.0), 0,
                                          CGRectGetWidth(self.view.frame)/3.0, CGRectGetHeight(self.view.frame))];
     [_awayTable setTitle:@"Away"];
     
     [self.view addSubview:_awayTable.view];
-    
-    UIView *gameMeta = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.view.frame)/3.0, CGRectGetMinY(self.view.frame),
-                                                                CGRectGetWidth(self.view.frame)/3.0, CGRectGetHeight(self.view.frame))];
-    [gameMeta setBackgroundColor:[UIColor redColor]];
-    [self.view addSubview:gameMeta];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [_homeTable.view setFrame:CGRectMake(CGRectGetMinX(self.view.frame), CGRectGetMinY(self.view.frame),
+                                         CGRectGetWidth(self.view.frame)/3.0, CGRectGetHeight(self.view.frame))];
+    [_awayTable.view setFrame:CGRectMake(CGRectGetMaxX(self.view.frame)-(CGRectGetWidth(self.view.frame)/3.0), CGRectGetMinY(self.view.frame),
+                                         CGRectGetWidth(self.view.frame)/3.0, CGRectGetHeight(self.view.frame))];
 }
 
 - (void)_cancelButtonPressed {
