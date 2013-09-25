@@ -33,8 +33,8 @@
     [self.view setAutoresizingMask:(UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth |
                                     UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin |
                                     UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin)];
-    self.extendedLayoutIncludesOpaqueBars = YES;
-    
+    [self setEdgesForExtendedLayout:UIRectEdgeNone];
+    [self setExtendedLayoutIncludesOpaqueBars:NO];
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
                                                                                   target:self
                                                                                   action:@selector(_cancelButtonPressed)];
@@ -46,15 +46,11 @@
     [self.navigationItem setRightBarButtonItem:doneButton];
     
     _homeTable = [[STTeamTableViewController alloc] init];
-    [_homeTable.view setFrame:CGRectMake(CGRectGetMinX(self.view.frame), CGRectGetMinY(self.view.frame),
-                                         CGRectGetWidth(self.view.frame)/3.0, CGRectGetHeight(self.view.frame))];
     [_homeTable setTitle:@"Home"];
 
     [self.view addSubview:_homeTable.view];
     
     _awayTable = [[STTeamTableViewController alloc] init];
-    [_awayTable.view setFrame:CGRectMake(CGRectGetMaxX(self.view.frame)-(CGRectGetWidth(self.view.frame)/3.0), 0,
-                                         CGRectGetWidth(self.view.frame)/3.0, CGRectGetHeight(self.view.frame))];
     [_awayTable setTitle:@"Away"];
     
     [self.view addSubview:_awayTable.view];
@@ -62,9 +58,9 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [_homeTable.view setFrame:CGRectMake(CGRectGetMinX(self.view.frame), CGRectGetMinY(self.view.frame),
+    [_homeTable.view setFrame:CGRectMake(CGRectGetMinX(self.view.frame), 0,
                                          CGRectGetWidth(self.view.frame)/3.0, CGRectGetHeight(self.view.frame))];
-    [_awayTable.view setFrame:CGRectMake(CGRectGetMaxX(self.view.frame)-(CGRectGetWidth(self.view.frame)/3.0), CGRectGetMinY(self.view.frame),
+    [_awayTable.view setFrame:CGRectMake(CGRectGetMaxX(self.view.frame)-(CGRectGetWidth(self.view.frame)/3.0), 0,
                                          CGRectGetWidth(self.view.frame)/3.0, CGRectGetHeight(self.view.frame))];
 }
 
