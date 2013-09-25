@@ -17,8 +17,6 @@
 		D30B30B717DCE0F000F2F987 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30B30B617DCE0F000F2F987 /* XCTest.framework */; };
 		D30B30B817DCE0F000F2F987 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30B309D17DCE0F000F2F987 /* Foundation.framework */; };
 		D30B30B917DCE0F000F2F987 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30B30A117DCE0F000F2F987 /* UIKit.framework */; };
-		D30B30C117DCE0F000F2F987 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D30B30BF17DCE0F000F2F987 /* InfoPlist.strings */; };
-		D30B30C317DCE0F000F2F987 /* StatsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D30B30C217DCE0F000F2F987 /* StatsTests.m */; };
 		D30B30CE17DCE13700F2F987 /* STGameTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30B30CD17DCE13700F2F987 /* STGameTableViewController.m */; };
 		D30B30D217DCE33200F2F987 /* STCreateGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30B30D117DCE33200F2F987 /* STCreateGameViewController.m */; };
 		D30B30D517DCE40A00F2F987 /* STTeamTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30B30D417DCE40A00F2F987 /* STTeamTableViewController.m */; };
@@ -53,9 +51,6 @@
 		D30B30AF17DCE0F000F2F987 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D30B30B517DCE0F000F2F987 /* StatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30B30B617DCE0F000F2F987 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		D30B30BE17DCE0F000F2F987 /* StatsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StatsTests-Info.plist"; sourceTree = "<group>"; };
-		D30B30C017DCE0F000F2F987 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D30B30C217DCE0F000F2F987 /* StatsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatsTests.m; sourceTree = "<group>"; };
 		D30B30CC17DCE13700F2F987 /* STGameTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STGameTableViewController.h; path = ViewControllers/STGameTableViewController.h; sourceTree = "<group>"; };
 		D30B30CD17DCE13700F2F987 /* STGameTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STGameTableViewController.m; path = ViewControllers/STGameTableViewController.m; sourceTree = "<group>"; };
 		D30B30D017DCE33200F2F987 /* STCreateGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STCreateGameViewController.h; path = ViewControllers/STCreateGameViewController.h; sourceTree = "<group>"; };
@@ -102,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				D30B30A317DCE0F000F2F987 /* Stats */,
-				D30B30BC17DCE0F000F2F987 /* StatsTests */,
 				D30B309C17DCE0F000F2F987 /* Frameworks */,
 				D30B309B17DCE0F000F2F987 /* Products */,
 			);
@@ -150,24 +144,6 @@
 				D30B30A617DCE0F000F2F987 /* InfoPlist.strings */,
 				D30B30A917DCE0F000F2F987 /* main.m */,
 				D30B30AB17DCE0F000F2F987 /* Stats-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D30B30BC17DCE0F000F2F987 /* StatsTests */ = {
-			isa = PBXGroup;
-			children = (
-				D30B30C217DCE0F000F2F987 /* StatsTests.m */,
-				D30B30BD17DCE0F000F2F987 /* Supporting Files */,
-			);
-			path = StatsTests;
-			sourceTree = "<group>";
-		};
-		D30B30BD17DCE0F000F2F987 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D30B30BE17DCE0F000F2F987 /* StatsTests-Info.plist */,
-				D30B30BF17DCE0F000F2F987 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -301,7 +277,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D30B30C117DCE0F000F2F987 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +304,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D30B30C317DCE0F000F2F987 /* StatsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,14 +322,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				D30B30A717DCE0F000F2F987 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		D30B30BF17DCE0F000F2F987 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D30B30C017DCE0F000F2F987 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
