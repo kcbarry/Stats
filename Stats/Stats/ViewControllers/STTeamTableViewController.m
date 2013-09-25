@@ -14,23 +14,34 @@
 
 @interface STTeamTableViewController  ()
 
-@property (nonatomic) UITableView *tableView;
+@property UITableViewController *tableViewController;
 
 @end
 
 @implementation STTeamTableViewController
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _tableViewController = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+    }
+    return self;
+}
+
+- (void)setTitle:(NSString *)title {
+    [super setTitle:title];
+    [_tableViewController setTitle:title];
+}
 
 - (void)loadView {
     [super loadView];
     [self.view setAutoresizingMask:(UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin)];
     
-    UITableViewController *tableViewController = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
-    [tableViewController.view setFrame:self.view.frame];
-    [tableViewController.tableView setDelegate:self];
-    [tableViewController.tableView setDataSource:self];
+    [_tableViewController.view setFrame:self.view.frame];
+    [_tableViewController.tableView setDelegate:self];
+    [_tableViewController.tableView setDataSource:self];
     
-    [self pushViewController:tableViewController animated:NO];
+    [self pushViewController:_tableViewController animated:NO];
 }
 
 #pragma mark - UITableViewDataSource
@@ -75,7 +86,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 1) {
         STCreateTeamViewController *createTeamViewController = [[STCreateTeamViewController alloc] init];
-        [self pushViewController:createTeamViewController animated:YES];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:createTeamViewController];
+        [self presentViewController:navigationController
+                           animated:YES
+                         completion:nil];
         
     } 
 }

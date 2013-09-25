@@ -14,11 +14,10 @@
 
 @implementation STCreateTeamViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+- (instancetype)init {
+    self = [super init];
     if (self) {
-        // Custom initialization
+        [self setTitle:@"Create Team"];
     }
     return self;
 }
@@ -26,6 +25,7 @@
 - (void)loadView {
     [super loadView];
     [self.view setBackgroundColor:[UIColor blueColor]];
+    
 }
 
 - (void)viewDidLoad
