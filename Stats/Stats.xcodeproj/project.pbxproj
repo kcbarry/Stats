@@ -128,13 +128,13 @@
 		D30B30A317DCE0F000F2F987 /* Stats */ = {
 			isa = PBXGroup;
 			children = (
+				D30B30AF17DCE0F000F2F987 /* Images.xcassets */,
 				D30B30AC17DCE0F000F2F987 /* STAppDelegate.h */,
 				D30B30AD17DCE0F000F2F987 /* STAppDelegate.m */,
 				D3CCA48817DE31AC004C5745 /* Model */,
 				D3CCA48117DE3155004C5745 /* TableViewCells */,
 				D3CCA47D17DE30A5004C5745 /* DataSources */,
 				D30B30CF17DCE13E00F2F987 /* ViewControllers */,
-				D30B30AF17DCE0F000F2F987 /* Images.xcassets */,
 				D30B30A417DCE0F000F2F987 /* Supporting Files */,
 			);
 			path = Stats;
